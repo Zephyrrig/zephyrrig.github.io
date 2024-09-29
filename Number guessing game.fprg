@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Number guessing game"/>
+        <attribute name="authors" value="aweso"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-28 10:06:55 PM"/>
+        <attribute name="created" value="YXdlc287REVTS1RPUC1JVFNGUk5MOzIwMjQtMDktMjg7MDk6MDU6MjIgUE07Mjk2MQ=="/>
+        <attribute name="edited" value="YXdlc287REVTS1RPUC1JVFNGUk5MOzIwMjQtMDktMjg7MTA6MDY6NTUgUE07MjszMDY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="secret" type="Integer" array="False" size=""/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <assign variable="secret" expression="random(20)+1"/>
+            <output expression="&quot;Guess a number from 1 to 20&quot;" newline="True"/>
+            <input variable="guess"/>
+            <while expression="guess != secret">
+                <if expression="guess &gt; 20&#13;&#10;or&#13;&#10;guess &lt; 1">
+                    <then>
+                        <output expression="&quot;Please pick a number from 1 to 20&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="guess &gt; secret">
+                    <then>
+                        <output expression="&quot;Too High&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="guess &lt; secret">
+                    <then>
+                        <output expression="&quot;Too Low&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Try again&quot;" newline="True"/>
+                <input variable="guess"/>
+            </while>
+            <output expression="&quot;Congratulations, you win!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
