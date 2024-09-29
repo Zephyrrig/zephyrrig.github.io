@@ -1,6 +1,6 @@
 ```mermaid
 flowchart TD
-    A[Main] --> B{Integer Secret}
+    A[Start] --> B{Integer Secret}
     B --> C{Integer guess}
     C --> D["`secret = random(20)+1`"]
     D --> E["`Output 'Guess a number from 1 to 20'`"]
@@ -24,7 +24,6 @@ flowchart TD
     G --> |False| S[Output 'Congratulations, you win!']
     S --> T[End]
 	
-Start([Start]) --> End([End])
 ```
 
 B and C are establishing secret and guess as integers for the game.
